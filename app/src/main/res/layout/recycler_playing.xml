@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/TvMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Song Name"
+        app:layout_constraintTop_toBottomOf="@+id/TvMusic"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:id="@+id/TvSongName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:paddingStart="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/seek_bar"
+        android:id="@+id/tvTime"
+        app:layout_constraintTop_toBottomOf="@+id/TvSongName"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End"
+        android:paddingStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvEnd"
+        app:layout_constraintTop_toBottomOf="@+id/TvSongName"
+        />
+
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toEndOf="@id/tvTime"
+        app:layout_constraintTop_toBottomOf="@+id/TvSongName" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_previous"
+            android:id="@+id/previous"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:id="@+id/play"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next"
+            android:id="@+id/next"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

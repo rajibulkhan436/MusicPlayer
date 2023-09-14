@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/playlistFragment">
+
+
+    <fragment
+        android:id="@+id/playlistFragment"
+        android:name="com.rajibul.musicplayer.PlaylistFragment"
+        android:label="fragment_playlist"
+        tools:layout="@layout/fragment_playlist" />
+    <fragment
+        android:id="@+id/musicPlayingFragment"
+        android:name="com.rajibul.musicplayer.MusicPlayingFragment"
+        android:label="fragment_music_playing"
+        tools:layout="@layout/fragment_music_playing" />
+
+
+</navigation>
